@@ -4,8 +4,7 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 
 # Replace 'YOUR_BOT_TOKEN' with your actual Telegram bot token
-bot_token = ""
-
+bot_token = "6888068196:AAH9wO-U8SgrOuo30BQQXoLHb_-yo7YuePg"
 async def start(update, context):
     await update.message.reply_text(
         "Welcome to the VirusTotal Scanner Bot!\n"
@@ -28,8 +27,7 @@ async def scan(update, context):
         return
 
     # Insert your VirusTotal API key here
-    api_key = ""
-
+  api="31cb49bdf22cfa7953498a8a2c657bda10fd86d056f7cf9ec0ba049506c3909d"
     # Create the request to the VirusTotal API
     params = {'apikey': api_key, 'resource': url}
     response = requests.post('https://www.virustotal.com/vtapi/v2/url/report', params=params)
